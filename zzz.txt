@@ -1,0 +1,30 @@
+python manage.py runserver   стартуем
+
+python manage.py startapp foxApp создаем проект внутри
+
+pip install mysqlclient
+ mysql -u root -p
+
+ net start MySQL90 ( comand for windows)
+ CREATE DATABASE fox_app_db;
+
+
+pip install django-environ
+
+add setting.py   (17str)
+from environ import Env
+env = Env()
+Env.read_env(BASE_DIR/'.env')
+
+SECRET_KEY = env.str("SECRET_KEY")
+
+DEBUG = env.bool('DEBUG')
+
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+
+
+
+
+
+
+ 
