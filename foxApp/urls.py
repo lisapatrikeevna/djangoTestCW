@@ -1,11 +1,12 @@
 # myapp/urls.py
 from django.urls import path
-
 from . import views
 # from foxApp import views
 
-urlpatterns = [path('hello/', views.hello_world, name='hello_world'), ]
-
+# urlpatterns = [path('hello/', views.hello_world, name='hello_world'), ]
+urlpatterns = [
+    path('', views.first_view, name='first_view'),
+]
 
 
 #

@@ -16,15 +16,28 @@ from environ import Env
 env = Env()
 Env.read_env(BASE_DIR/'.env')
 
-SECRET_KEY = env.str("SECRET_KEY")
+#.env
+DB_NAME=fox_app_db
+DB_USER=root
+DB_PASSWORD=admin
+DB_HOST=127.0.0.1,localhost
+DB_PORT=3306
+MYSQL=False
+ALLOWED_HOSTS=127.0.0.1,localhost
 
-DEBUG = env.bool('DEBUG')
-
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
-
-
-
+#settings.py
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env.bool('DJANGOSQL_DEBUG', default=True)
+ALLOWED_HOSTS = env.list('DJANGOSQL_ALLOWED_HOSTS', default=[])
 
 
 
- 
+python manage.py startapp main    -create new app
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+
+
