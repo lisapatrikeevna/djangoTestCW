@@ -1,0 +1,12 @@
+{% extends 'foxApp/layout.html' %}
+{% load static %}
+
+{% block title %} main title contact text{% endblock %}
+
+{% block first %}
+    <h1>contact page</h1>
+    <p>contact text for contacts block </p>
+
+    {% include 'foxApp/test.html' %}
+    <img src="{% static 'main/assets/myAvatar5.jpg' %}" alt="avatar">
+{% endblock %}

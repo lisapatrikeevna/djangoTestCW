@@ -37,7 +37,15 @@ python manage.py startapp main    -create new app
 python manage.py makemigrations
 python manage.py migrate
 
+Чтобы зафиксировать текущие версии всех зависимостей вашего проекта в файле requirements.txt, выполните следующие шаги:
+1. Убедитесь, что используете виртуальное окружение
+python -m venv venv
+source venv/bin/activate  # Для macOS/Linux
+# или
+venv\Scripts\activate  # Для Windows
 
-
+2. Установите все зависимости
+Убедитесь, что все необходимые зависимости установлены. Если у вас есть файл requirements.txt, вы можете установить зависимости из него:
+pip install -r requirements.txt
 
 

@@ -34,7 +34,8 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 # Application definition
 
 INSTALLED_APPS = [
-    'foxApp.apps.FoxappConfig',
+    'foxApp',
+    # 'foxApp.apps.FoxappConfig',
 
     # base
     'django.contrib.admin',

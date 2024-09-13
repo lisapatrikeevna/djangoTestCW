@@ -1,12 +1,15 @@
 # myapp/urls.py
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from . import views
-# from foxApp import views
 
-# urlpatterns = [path('hello/', views.hello_world, name='hello_world'), ]
+
 urlpatterns = [
-    path('', views.first_view, name='first_view'),
-]
+    path('first/', views.first_view, name='first'),
+    path('contacts/', views.contacts_view, name='contacts'),
+    path('', views.hello_world, name='hello'),
+] + static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)
 
 
 #

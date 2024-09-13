@@ -2,17 +2,16 @@
 
 # myapp/views.py
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def hello_world(request):
-    return HttpResponse("<h1>Hello, world!</h1>")
+    return HttpResponse("<h1>Hello, from fox!</h1>")
 
 
 def first_view(request):
-    return HttpResponse("<h1>Hello! It's my first view!</h1>")
+    return render(request, 'foxApp/index.html', {})
 
-# #views
-# from django.http import HttpResponse
-#
-# def hello_world(request):
-#     return HttpResponse("<h1>Hello, world!</h1>")
+
+def contacts_view(request):
+    return render(request, 'foxApp/contacts.html', {})

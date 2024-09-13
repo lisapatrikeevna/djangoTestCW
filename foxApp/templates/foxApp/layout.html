@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {#<link rel="stylesheet" href="{% static 'main/css/main.css' %}">#}
+</head>
+<body>
+{% block first %}
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing <h1>elit.
+    A architecto, consequuntur debitis delectus dignissimos eius</h1>
+    inventore iusto nemo odit reiciendis?
+    </p>
+    <span>
+        <h1></h1>
+        <p></p>
+    </span>
+{% endblock %}
+</body>
+</html>

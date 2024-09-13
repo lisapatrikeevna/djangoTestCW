@@ -20,7 +20,7 @@ from foxApp.views import hello_world
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('foxApp.urls')),  # Подключение маршрутов приложения
+    path('', include('foxApp.urls')),  # Подключение маршрутов приложения
                ]
 
 
